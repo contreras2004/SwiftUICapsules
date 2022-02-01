@@ -7,19 +7,13 @@
 
 import SwiftUI
 
-
 struct ElementsListView: View {
     @State private var searchText = ""
     var body: some View {
-        
-        
         List {
-            NavigationLink("Text") { Texts() }
-            NavigationLink("Toggle Switch") { ToggleSwitch() }
-            NavigationLink("Images") { Images() }
-            NavigationLink("Buttons") { Buttons() }
-            NavigationLink("Songs") { SongsView() }
-            NavigationLink("SearchBar") { SearchBar() }
+            ForEach(Route.allCases) { rout in
+                Coordinator.navigate(rout) { Text(rout.text) }
+            }
         }
         .navigationTitle("SwiftUI Elements")
         .searchable(text: $searchText)

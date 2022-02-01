@@ -27,6 +27,8 @@
 		8E0EE30827A965B10056BCC9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8E0EE30727A965B10056BCC9 /* Kingfisher */; };
 		8E0EE30B27A96D9F0056BCC9 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EE30A27A96D9F0056BCC9 /* Font+Extension.swift */; };
 		8E0EE30F27A96E740056BCC9 /* SwiftUICapsulesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EE30E27A96E740056BCC9 /* SwiftUICapsulesApp.swift */; };
+		8E0EE31227A979190056BCC9 /* Routs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EE31127A979190056BCC9 /* Routs.swift */; };
+		8E0EE31427A979360056BCC9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EE31327A979360056BCC9 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		8E0EE2F927A965480056BCC9 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		8E0EE30A27A96D9F0056BCC9 /* Font+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		8E0EE30E27A96E740056BCC9 /* SwiftUICapsulesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUICapsulesApp.swift; sourceTree = "<group>"; };
+		8E0EE31127A979190056BCC9 /* Routs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Routs.swift; path = ../../../Routs.swift; sourceTree = "<group>"; };
+		8E0EE31327A979360056BCC9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		8E0EE2BD27A964F00056BCC9 /* SwiftUICapsules */ = {
 			isa = PBXGroup;
 			children = (
+				8E0EE31027A979050056BCC9 /* Coordinator */,
 				8E0EE30E27A96E740056BCC9 /* SwiftUICapsulesApp.swift */,
 				8E0EE30927A96D9F0056BCC9 /* Extensions */,
 				8E0EE2EE27A965470056BCC9 /* Views */,
@@ -210,6 +215,15 @@
 				8E0EE30A27A96D9F0056BCC9 /* Font+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8E0EE31027A979050056BCC9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8E0EE31127A979190056BCC9 /* Routs.swift */,
+				8E0EE31327A979360056BCC9 /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,9 +366,11 @@
 			files = (
 				8E0EE2FE27A965480056BCC9 /* Buttons.swift in Sources */,
 				8E0EE30127A965480056BCC9 /* ToggleSwitch.swift in Sources */,
+				8E0EE31427A979360056BCC9 /* Coordinator.swift in Sources */,
 				8E0EE2FC27A965480056BCC9 /* SongsView.swift in Sources */,
 				8E0EE30027A965480056BCC9 /* Texts.swift in Sources */,
 				8E0EE30227A965480056BCC9 /* Images.swift in Sources */,
+				8E0EE31227A979190056BCC9 /* Routs.swift in Sources */,
 				8E0EE30F27A96E740056BCC9 /* SwiftUICapsulesApp.swift in Sources */,
 				8E0EE2FB27A965480056BCC9 /* WelcomeView.swift in Sources */,
 				8E0EE2EC27A9652B0056BCC9 /* SongsResponse.swift in Sources */,
