@@ -15,6 +15,8 @@ enum AppCoordinatorRout: Route {
     case buttons
     case songs
     case searchBar
+    case navigationExample
+    case bindingExample
     
     var text: String {
         switch self {
@@ -30,6 +32,10 @@ enum AppCoordinatorRout: Route {
             return "Canciones"
         case .searchBar:
             return "Búsqueda"
+        case .navigationExample:
+            return "Ejemplo de Navegación"
+        case .bindingExample:
+            return "Binding básico"
         }
     }
 }
@@ -68,6 +74,14 @@ class AppCoordinator: Coordinator {
             })
         case .searchBar:
             return AnyView(NavigationLink(destination: SearchBar()) {
+                content()
+            })
+        case .navigationExample:
+            return AnyView(NavigationLink(destination: NavigationExample1()) {
+                content()
+            })
+        case .bindingExample:
+            return AnyView(NavigationLink(destination: BindingExample1(color: .white)) {
                 content()
             })
         case .none:

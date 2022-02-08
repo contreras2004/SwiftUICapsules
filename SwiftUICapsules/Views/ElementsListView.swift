@@ -18,7 +18,7 @@ struct ElementsListView: View {
             }
         }
         .navigationTitle("SwiftUI Elements")
-        .searchable(text: $searchText)
+        //.searchable(text: $searchText)
     }
 }
 

@@ -10,11 +10,11 @@ import SwiftUI
 struct SearchBar: View {
     @State private var searchText = ""
     var body: some View {
-        NavigationView {
+        //NavigationView {
             Text("Searching for \(searchText)")
+            .navigationTitle("Searchable Example")
                 
-                
-        }.navigationTitle("Searchable Example")
+        //}
     }
 }
 
