@@ -24,7 +24,7 @@ struct BindingExample1: View {
         ZStack {
             Color(color).ignoresSafeArea()
             VStack {
-                Text("Hola \(name == nil ? "Extraño" : name)")
+                Text("Hola \(name)")
                     .padding()
                 Spacer()
                 Text("Show sheet")
@@ -49,6 +49,7 @@ struct BindingExample2: View {
             Text("Tu nombre:")
             TextField("", text: $name, prompt: Text("Ingresa tu nombre"))
                 .padding()
+                .font(.title2)
                 .background(Color(uiColor: .lightGray))
             Spacer()
             Text("Cambia el color por el que te guste más 🤔").font(.title)

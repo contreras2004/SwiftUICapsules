@@ -16,6 +16,15 @@ struct ElementsListView: View {
             ForEach(AppCoordinatorRout.allCases) { route in
                 coordinator?.navigate(route) { Text(route.text) }
             }
+            /*Text("Hola")
+            Text("Hola")
+            Text("Hola")
+            Text("Hola")
+            Text("Hola")
+            Text("Hola")
+            Text("Hola")
+            Text("Hola")
+            Text("Hola")*/
         }
         .navigationTitle("SwiftUI Elements")
         //.searchable(text: $searchText)
