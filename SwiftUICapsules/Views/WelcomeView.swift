@@ -9,11 +9,9 @@ import SwiftUI
 
 struct WelcomeView: View {
     
-    var foreverAnimation: Animation {
-        Animation.linear(duration: 2.0)
-            .repeatForever(autoreverses: false)
-    }
-
+    let coordinator = AppCoordinator()
+    
+    @State private var rotating = false
     
     var body: some View {
         
@@ -25,18 +23,22 @@ struct WelcomeView: View {
                     Text("SwiftUI \nCapsules")
                         .padding()
                         .multilineTextAlignment(.center)
-                        .font(.title)
+                        .font(.athleticOutfit(size: 36))
                         
                     Image("capsule")
                         .resizable()
+                        .frame(width: 200, height: 200, alignment: Alignment(horizontal: SwiftUI.HorizontalAlignment.center, vertical: SwiftUI.VerticalAlignment.center))
                         .scaledToFit()
-                        .padding([.leading, .trailing], 100)
-                        .rotationEffect(Angle(degrees: 360))
+                        .rotationEffect(.degrees(rotating ? 360 : 0))
+                        .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false), value: rotating)
+                        .onAppear{
+                            self.rotating = true
+                        }
+                        .padding()
                         //.animation(foreverAnimation)
-                    Spacer()
                     NavigationLink("Lest get started!") {
-                        ElementsListView()
-                    }
+                        ElementsListView(coordinator: coordinator)
+                    }.padding()
                     Spacer()
                 }
             }

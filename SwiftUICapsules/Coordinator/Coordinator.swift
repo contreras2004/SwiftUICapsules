@@ -6,12 +6,46 @@
 //
 
 import SwiftUI
+import Coordinator
 
-struct Coordinator {
+enum AppCoordinatorRout: Route {
+    case text
+    case toggles
+    case images
+    case buttons
+    case songs
+    case searchBar
     
-    static func navigate<T: View>(_ route: Route, content: () -> T) -> AnyView {
-        
-        switch route {
+    var text: String {
+        switch self {
+        case .text:
+            return "Textos"
+        case .toggles:
+            return "Toggles"
+        case .images:
+            return "Imágenes"
+        case .buttons:
+            return "Botones"
+        case .songs:
+            return "Canciones"
+        case .searchBar:
+            return "Búsqueda"
+        }
+    }
+}
+
+extension AppCoordinatorRout: CaseIterable { }
+
+extension AppCoordinatorRout: Identifiable {
+    var id: Self { self }
+}
+
+
+
+class AppCoordinator: Coordinator {
+    
+    func navigate<T>(_ route: Route, content: () -> T) -> AnyView where T : View {
+        switch route as? AppCoordinatorRout {
         case .text:
             return AnyView(NavigationLink(destination: Texts()) {
                 content()
@@ -29,13 +63,24 @@ struct Coordinator {
                 content()
             })
         case .songs:
-            return AnyView(NavigationLink(destination: SongsView()) {
+            return AnyView(NavigationLink(destination: SongsView(provider: AppProvider())) {
                 content()
             })
         case .searchBar:
             return AnyView(NavigationLink(destination: SearchBar()) {
                 content()
             })
+        case .none:
+            return AnyView(NavigationLink(destination: Texts()) {
+                content()
+            })
         }
     }
 }
+
+
+/*extension Route: CaseIterable { }
+
+extension Route: Identifiable {
+    var id: Self { self }
+}*/

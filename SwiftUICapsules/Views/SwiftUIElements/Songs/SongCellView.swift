@@ -8,22 +8,36 @@
 import SwiftUI
 import Kingfisher
 
-struct SongCellView: View {
+protocol SongCellDelegate: AnyObject{
+    func didTap(song: SongsResponse.Song)
+}
+
+struct SongCellView: View, Identifiable {
+    let id = UUID()
+    weak var delegate: SongCellDelegate?
     @State var song: SongsResponse.Song
+    @State var rotating = false
+    @State var showingPopover = false
     var body: some View {
         HStack {
-            KFImage(URL(string: song.artworkUrl60))
+            KFImage.url(song.artworkUrl60)
+                .placeholder {
+                    Image("capsule")
+                        .resizable()
+                        .scaledToFit()
+                }
                 .resizable()
+                .scaledToFit()
                 .frame(width: 60, height: 60, alignment: .leading)
-            Text("Song: \(song.trackName)")
-                .foregroundColor(Color("textColor"))
+                .padding(5)
+            Text(song.trackName)
         }
     }
 }
 
-struct SongCellView_Previews: PreviewProvider {
+/*struct SongCellView_Previews: PreviewProvider {
     static var previews: some View {
-        SongCellView(song: SongsResponse.Song(id: 1, trackName: "Test", artworkUrl60: ""))
+        SongCellView(song: SongsResponse.Song(id: 1, trackName: "Test", artworkUrl60: URL(string: "capsule")!))
     }
-}
+}*/
 

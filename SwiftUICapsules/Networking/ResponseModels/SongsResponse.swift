@@ -21,12 +21,16 @@ extension SongsResponse {
     struct Song: Decodable, Identifiable {
         let id: Int64
         let trackName: String
-        let artworkUrl60: String
+        let artistName: String
+        let artworkUrl60: URL
+        let artworkUrl100: URL
         
         enum CodingKeys: String, CodingKey {
             case id = "trackId"
             case trackName
             case artworkUrl60
+            case artworkUrl100
+            case artistName
         }
     }
 }

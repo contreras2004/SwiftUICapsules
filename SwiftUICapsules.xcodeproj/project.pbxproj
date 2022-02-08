@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0B2CC327B1530D00AA4F0A /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8E0B2CC227B1530D00AA4F0A /* Coordinator */; };
+		8E0B2CC827B2A67D00AA4F0A /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CC727B2A67D00AA4F0A /* JSONHelper.swift */; };
+		8E0B2CCA27B2A74500AA4F0A /* Songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0B2CC927B2A74500AA4F0A /* Songs.json */; };
+		8E0B2CCC27B2C90500AA4F0A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CCB27B2C90500AA4F0A /* DetailView.swift */; };
+		8E0B2CCE27B2D33C00AA4F0A /* Athletic-Outfit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0B2CCD27B2D33C00AA4F0A /* Athletic-Outfit.ttf */; };
 		8E0EE2C327A964F20056BCC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0EE2C227A964F20056BCC9 /* Assets.xcassets */; };
 		8E0EE2C627A964F20056BCC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0EE2C527A964F20056BCC9 /* Preview Assets.xcassets */; };
 		8E0EE2D027A964F20056BCC9 /* SwiftUICapsulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EE2CF27A964F20056BCC9 /* SwiftUICapsulesTests.swift */; };
@@ -49,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E0B2CBE27B14BDF00AA4F0A /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
+		8E0B2CC727B2A67D00AA4F0A /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
+		8E0B2CC927B2A74500AA4F0A /* Songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Songs.json; sourceTree = "<group>"; };
+		8E0B2CCB27B2C90500AA4F0A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8E0B2CCD27B2D33C00AA4F0A /* Athletic-Outfit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Athletic-Outfit.ttf"; sourceTree = "<group>"; };
+		8E0B2CCF27B2D3C200AA4F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8E0EE2BB27A964F00056BCC9 /* SwiftUICapsules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICapsules.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0EE2C227A964F20056BCC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0EE2C527A964F20056BCC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -79,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0B2CC327B1530D00AA4F0A /* Coordinator in Frameworks */,
 				8E0EE30827A965B10056BCC9 /* Kingfisher in Frameworks */,
 				8E0EE30527A965910056BCC9 /* Alamofire in Frameworks */,
 			);
@@ -101,13 +113,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E0B2CC127B1530D00AA4F0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E0B2CC627B2A5D400AA4F0A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8E0B2CC927B2A74500AA4F0A /* Songs.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		8E0EE2B227A964F00056BCC9 = {
 			isa = PBXGroup;
 			children = (
+				8E0B2CBE27B14BDF00AA4F0A /* Coordinator */,
 				8E0EE2BD27A964F00056BCC9 /* SwiftUICapsules */,
 				8E0EE2CE27A964F20056BCC9 /* SwiftUICapsulesTests */,
 				8E0EE2D827A964F20056BCC9 /* SwiftUICapsulesUITests */,
 				8E0EE2BC27A964F00056BCC9 /* Products */,
+				8E0B2CC127B1530D00AA4F0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +153,8 @@
 		8E0EE2BD27A964F00056BCC9 /* SwiftUICapsules */ = {
 			isa = PBXGroup;
 			children = (
+				8E0B2CCF27B2D3C200AA4F0A /* Info.plist */,
+				8E0B2CCD27B2D33C00AA4F0A /* Athletic-Outfit.ttf */,
 				8E0EE31027A979050056BCC9 /* Coordinator */,
 				8E0EE30E27A96E740056BCC9 /* SwiftUICapsulesApp.swift */,
 				8E0EE30927A96D9F0056BCC9 /* Extensions */,
@@ -163,8 +194,10 @@
 		8E0EE2E827A9652B0056BCC9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8E0B2CC627B2A5D400AA4F0A /* Mocks */,
 				8E0EE2E927A9652B0056BCC9 /* ResponseModels */,
 				8E0EE2EB27A9652B0056BCC9 /* API.swift */,
+				8E0B2CC727B2A67D00AA4F0A /* JSONHelper.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -205,6 +238,7 @@
 			children = (
 				8E0EE2F327A965470056BCC9 /* SongsView.swift */,
 				8E0EE2F427A965470056BCC9 /* SongCellView.swift */,
+				8E0B2CCB27B2C90500AA4F0A /* DetailView.swift */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -245,6 +279,7 @@
 			packageProductDependencies = (
 				8E0EE30427A965910056BCC9 /* Alamofire */,
 				8E0EE30727A965B10056BCC9 /* Kingfisher */,
+				8E0B2CC227B1530D00AA4F0A /* Coordinator */,
 			);
 			productName = SwiftUICapsules;
 			productReference = 8E0EE2BB27A964F00056BCC9 /* SwiftUICapsules.app */;
@@ -338,7 +373,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0B2CCE27B2D33C00AA4F0A /* Athletic-Outfit.ttf in Resources */,
 				8E0EE2C627A964F20056BCC9 /* Preview Assets.xcassets in Resources */,
+				8E0B2CCA27B2A74500AA4F0A /* Songs.json in Resources */,
 				8E0EE2C327A964F20056BCC9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,9 +403,11 @@
 			files = (
 				8E0EE2FE27A965480056BCC9 /* Buttons.swift in Sources */,
 				8E0EE30127A965480056BCC9 /* ToggleSwitch.swift in Sources */,
+				8E0B2CCC27B2C90500AA4F0A /* DetailView.swift in Sources */,
 				8E0EE31427A979360056BCC9 /* Coordinator.swift in Sources */,
 				8E0EE2FC27A965480056BCC9 /* SongsView.swift in Sources */,
 				8E0EE30027A965480056BCC9 /* Texts.swift in Sources */,
+				8E0B2CC827B2A67D00AA4F0A /* JSONHelper.swift in Sources */,
 				8E0EE30227A965480056BCC9 /* Images.swift in Sources */,
 				8E0EE31227A979190056BCC9 /* Routs.swift in Sources */,
 				8E0EE30F27A96E740056BCC9 /* SwiftUICapsulesApp.swift in Sources */,
@@ -542,6 +581,7 @@
 				DEVELOPMENT_TEAM = 8L7G9ZSMYC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUICapsules/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -571,6 +611,7 @@
 				DEVELOPMENT_TEAM = 8L7G9ZSMYC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUICapsules/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -726,6 +767,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E0B2CC227B1530D00AA4F0A /* Coordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Coordinator;
+		};
 		8E0EE30427A965910056BCC9 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E0EE30327A965910056BCC9 /* XCRemoteSwiftPackageReference "Alamofire" */;

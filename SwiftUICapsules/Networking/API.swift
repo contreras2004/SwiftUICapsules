@@ -9,7 +9,18 @@ import Foundation
 import Alamofire
 import UIKit
 
-class API {
+protocol API {
+    func fetchSongs(artist: String) async -> [SongsResponse.Song]?
+}
+
+class MockProvider: API {
+    func fetchSongs(artist: String) async -> [SongsResponse.Song]? {
+        let songs: [SongsResponse.Song]! = JSONHelper.loadJSON(withFile: "Songs", inBundle: Bundle.main.self)
+        return songs
+    }
+}
+
+class AppProvider: API {
     
     enum Endpoint: String, URLConvertible {
         case songs = "https://itunes.apple.com/search?term=%@"
@@ -39,6 +50,7 @@ class API {
         //try await Task.sleep(nanoseconds: UInt64(2 * Double(NSEC_PER_SEC)))
         return try await withCheckedThrowingContinuation { continuation in
             AF.request(url).responseDecodable(of: T.self) { response in
+                debugPrint(response.description)
                 switch response.result {
                 case .success(let object):
                     continuation.resume(returning: object)

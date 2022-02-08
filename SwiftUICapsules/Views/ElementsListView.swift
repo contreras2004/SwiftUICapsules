@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import Coordinator
 
 struct ElementsListView: View {
+    var coordinator: Coordinator?
     @State private var searchText = ""
     var body: some View {
         List {
-            ForEach(Route.allCases) { rout in
-                Coordinator.navigate(rout) { Text(rout.text) }
+            ForEach(AppCoordinatorRout.allCases) { route in
+                coordinator?.navigate(route) { Text(route.text) }
             }
         }
         .navigationTitle("SwiftUI Elements")
@@ -22,6 +24,6 @@ struct ElementsListView: View {
 
 struct ElementsListView_Previews: PreviewProvider {
     static var previews: some View {
-        ElementsListView()
+        ElementsListView(coordinator: nil)
     }
 }
