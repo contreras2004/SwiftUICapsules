@@ -17,6 +17,7 @@ enum AppCoordinatorRout: Route {
     case searchBar
     case navigationExample
     case bindingExample
+    case coordinatorTest
     
     var text: String {
         switch self {
@@ -36,6 +37,8 @@ enum AppCoordinatorRout: Route {
             return "Ejemplo de Navegación"
         case .bindingExample:
             return "Binding básico"
+        case .coordinatorTest:
+            return "Coordinator Test"
         }
     }
 }
@@ -82,6 +85,10 @@ class AppCoordinator: Coordinator {
             })
         case .bindingExample:
             return AnyView(NavigationLink(destination: BindingExample1(color: .white)) {
+                content()
+            })
+        case .coordinatorTest:
+            return AnyView(NavigationLink(destination: MainTabView()) {
                 content()
             })
         case .none:

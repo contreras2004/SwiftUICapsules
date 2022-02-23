@@ -19,7 +19,11 @@ import SwiftUI
 struct BindingExample1: View {
     @State var color: UIColor
     @State var isShowingSheet = false
-    @State var name: String = "Extraño.."
+    @State var name: String = "Extraño.." {
+        didSet {
+            debugPrint("Esto nunca se va a ejecutar")
+        }
+    }
     var body: some View {
         ZStack {
             Color(color).ignoresSafeArea()

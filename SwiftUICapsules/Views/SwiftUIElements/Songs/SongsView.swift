@@ -16,6 +16,7 @@ struct SongsView: View {
     @State var searchText: String = "David Guetta"
     @State var sheetIsPresented = false
     @State var selectedSong: SongsResponse.Song? = nil
+    
     var body: some View {
         List {
             ForEach(songs ?? []) { song in
@@ -34,9 +35,16 @@ struct SongsView: View {
         .task {
             fetchSongs(artist: searchText)
         }
-        .sheet(item: $selectedSong) { song in
-            DetailView(song: song)
+        .sheet(isPresented: $sheetIsPresented) {
+            debugPrint("adios")
+        } content: { //song in
+            DetailView(song: selectedSong!)
         }
+
+        
+        /*.sheet(item: $selectedSong) { song in
+            DetailView(song: song)
+        }*/
     }
     
     func fetchSongs(artist: String) {

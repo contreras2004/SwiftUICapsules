@@ -14,6 +14,13 @@
 		8E0B2CCE27B2D33C00AA4F0A /* Athletic-Outfit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0B2CCD27B2D33C00AA4F0A /* Athletic-Outfit.ttf */; };
 		8E0B2CD227B2E60900AA4F0A /* NavigationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CD127B2E60900AA4F0A /* NavigationExample.swift */; };
 		8E0B2CD427B2EC2B00AA4F0A /* BindingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CD327B2EC2B00AA4F0A /* BindingExample.swift */; };
+		8E0B2CD727B417AD00AA4F0A /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CD627B417AD00AA4F0A /* TabView.swift */; };
+		8E0B2CD927B4183000AA4F0A /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CD827B4183000AA4F0A /* View1.swift */; };
+		8E0B2CDB27B4183C00AA4F0A /* View1Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CDA27B4183C00AA4F0A /* View1Destination.swift */; };
+		8E0B2CDD27B4184B00AA4F0A /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CDC27B4184B00AA4F0A /* View2.swift */; };
+		8E0B2CDF27B4185900AA4F0A /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CDE27B4185900AA4F0A /* View3.swift */; };
+		8E0B2CE127B41A1E00AA4F0A /* Tab1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CE027B41A1E00AA4F0A /* Tab1.swift */; };
+		8E0B2CE327B41A2700AA4F0A /* Tab2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B2CE227B41A2700AA4F0A /* Tab2.swift */; };
 		8E0EE2C327A964F20056BCC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0EE2C227A964F20056BCC9 /* Assets.xcassets */; };
 		8E0EE2C627A964F20056BCC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0EE2C527A964F20056BCC9 /* Preview Assets.xcassets */; };
 		8E0EE2D027A964F20056BCC9 /* SwiftUICapsulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EE2CF27A964F20056BCC9 /* SwiftUICapsulesTests.swift */; };
@@ -64,6 +71,13 @@
 		8E0B2CCF27B2D3C200AA4F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8E0B2CD127B2E60900AA4F0A /* NavigationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExample.swift; sourceTree = "<group>"; };
 		8E0B2CD327B2EC2B00AA4F0A /* BindingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExample.swift; sourceTree = "<group>"; };
+		8E0B2CD627B417AD00AA4F0A /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		8E0B2CD827B4183000AA4F0A /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
+		8E0B2CDA27B4183C00AA4F0A /* View1Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1Destination.swift; sourceTree = "<group>"; };
+		8E0B2CDC27B4184B00AA4F0A /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		8E0B2CDE27B4185900AA4F0A /* View3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
+		8E0B2CE027B41A1E00AA4F0A /* Tab1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1.swift; sourceTree = "<group>"; };
+		8E0B2CE227B41A2700AA4F0A /* Tab2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2.swift; sourceTree = "<group>"; };
 		8E0EE2BB27A964F00056BCC9 /* SwiftUICapsules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICapsules.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0EE2C227A964F20056BCC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0EE2C527A964F20056BCC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -130,6 +144,20 @@
 				8E0B2CC927B2A74500AA4F0A /* Songs.json */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8E0B2CD527B4179100AA4F0A /* CoordinatorTest */ = {
+			isa = PBXGroup;
+			children = (
+				8E0B2CD627B417AD00AA4F0A /* TabView.swift */,
+				8E0B2CE027B41A1E00AA4F0A /* Tab1.swift */,
+				8E0B2CE227B41A2700AA4F0A /* Tab2.swift */,
+				8E0B2CD827B4183000AA4F0A /* View1.swift */,
+				8E0B2CDA27B4183C00AA4F0A /* View1Destination.swift */,
+				8E0B2CDC27B4184B00AA4F0A /* View2.swift */,
+				8E0B2CDE27B4185900AA4F0A /* View3.swift */,
+			);
+			path = CoordinatorTest;
 			sourceTree = "<group>";
 		};
 		8E0EE2B227A964F00056BCC9 = {
@@ -227,6 +255,7 @@
 		8E0EE2F127A965470056BCC9 /* SwiftUIElements */ = {
 			isa = PBXGroup;
 			children = (
+				8E0B2CD527B4179100AA4F0A /* CoordinatorTest */,
 				8E0EE2F227A965470056BCC9 /* Songs */,
 				8E0EE2F527A965470056BCC9 /* Buttons.swift */,
 				8E0EE2F627A965470056BCC9 /* SearchBar.swift */,
@@ -407,8 +436,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0B2CE327B41A2700AA4F0A /* Tab2.swift in Sources */,
 				8E0EE2FE27A965480056BCC9 /* Buttons.swift in Sources */,
+				8E0B2CDB27B4183C00AA4F0A /* View1Destination.swift in Sources */,
 				8E0EE30127A965480056BCC9 /* ToggleSwitch.swift in Sources */,
+				8E0B2CE127B41A1E00AA4F0A /* Tab1.swift in Sources */,
 				8E0B2CCC27B2C90500AA4F0A /* DetailView.swift in Sources */,
 				8E0EE31427A979360056BCC9 /* Coordinator.swift in Sources */,
 				8E0EE2FC27A965480056BCC9 /* SongsView.swift in Sources */,
@@ -417,8 +449,12 @@
 				8E0B2CC827B2A67D00AA4F0A /* JSONHelper.swift in Sources */,
 				8E0EE30227A965480056BCC9 /* Images.swift in Sources */,
 				8E0EE31227A979190056BCC9 /* Routs.swift in Sources */,
+				8E0B2CD727B417AD00AA4F0A /* TabView.swift in Sources */,
 				8E0EE30F27A96E740056BCC9 /* SwiftUICapsulesApp.swift in Sources */,
+				8E0B2CDF27B4185900AA4F0A /* View3.swift in Sources */,
+				8E0B2CDD27B4184B00AA4F0A /* View2.swift in Sources */,
 				8E0B2CD227B2E60900AA4F0A /* NavigationExample.swift in Sources */,
+				8E0B2CD927B4183000AA4F0A /* View1.swift in Sources */,
 				8E0EE2FB27A965480056BCC9 /* WelcomeView.swift in Sources */,
 				8E0EE2EC27A9652B0056BCC9 /* SongsResponse.swift in Sources */,
 				8E0EE2ED27A9652B0056BCC9 /* API.swift in Sources */,

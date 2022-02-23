@@ -9,9 +9,10 @@ import SwiftUI
 
 struct LargeButton: View {
     var text = "Download files"
+    var action: () -> Void
 
     var body: some View {
-        Button(action: {}) {
+        Button(action: action) {
             Text(text)
                 .bold()
         }
@@ -26,7 +27,7 @@ struct LargeButton: View {
 struct Buttons: View {
     var body: some View {
         List {
-            LargeButton(text: "Large Button")
+            LargeButton(text: "Large Button", action: {})
         }.navigationTitle("Buttons")
     }
 }

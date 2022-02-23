@@ -42,7 +42,7 @@ struct WelcomeView: View {
                     Spacer()
                 }
             }
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
